@@ -1,0 +1,201 @@
+{
+  "info": {
+    "name": "AirCar Manager - API de Analítica (Taller 2)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Clasificación top (categorías)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/reportes/clasificacion-top",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "reportes",
+            "clasificacion-top"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Devuelve registros', () => pm.expect(pm.response.json().total_registros).to.be.above(0));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Actores estrella (clientes)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/analitica/actores-estrella",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "analitica",
+            "actores-estrella"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Devuelve registros', () => pm.expect(pm.response.json().total_registros).to.be.above(0));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Desviación de grupo (repuestos)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/items/desviacion-grupo?comparacion=inferior",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "items",
+            "desviacion-grupo"
+          ],
+          "query": [
+            {
+              "key": "comparacion",
+              "value": "inferior"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Devuelve registros', () => pm.expect(pm.response.json().total_registros).to.be.above(0));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Análisis limpio (tipo de vehículo)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/segmentos/analisis-limpio",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "segmentos",
+            "analisis-limpio"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Devuelve registros', () => pm.expect(pm.response.json().total_registros).to.be.above(0));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Resumen dinámico (método de pago)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/operaciones/resumen-dinamico?min_operaciones=2",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "operaciones",
+            "resumen-dinamico"
+          ],
+          "query": [
+            {
+              "key": "min_operaciones",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status 200', () => pm.response.to.have.status(200));",
+              "pm.test('Devuelve registros', () => pm.expect(pm.response.json().total_registros).to.be.above(0));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

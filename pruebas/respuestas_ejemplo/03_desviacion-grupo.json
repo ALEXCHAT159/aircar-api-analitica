@@ -1,0 +1,52 @@
+{
+    "estado": "ok",
+    "codigo": 200,
+    "endpoint": "/api/items/desviacion-grupo",
+    "descripcion": "Repuestos que venden menos unidades que el promedio de su categoría.",
+    "parametros": {
+        "comparacion": "inferior"
+    },
+    "total_registros": 5,
+    "datos": [
+        {
+            "id_producto": 2,
+            "codigo": "CMP-DEN10S17",
+            "producto": "Compresor Denso 10S17",
+            "categoria": "Compresores",
+            "unidades_vendidas": 1,
+            "promedio_categoria": 1.33
+        },
+        {
+            "id_producto": 1,
+            "codigo": "CMP-SD7H15",
+            "producto": "Compresor SD7H15 12V",
+            "categoria": "Compresores",
+            "unidades_vendidas": 1,
+            "promedio_categoria": 1.33
+        },
+        {
+            "id_producto": 4,
+            "codigo": "CND-UNI-18",
+            "producto": "Condensador universal paralelo 18 pulgadas",
+            "categoria": "Condensadores",
+            "unidades_vendidas": 1,
+            "promedio_categoria": 1.5
+        },
+        {
+            "id_producto": 9,
+            "codigo": "FLT-DSH-UNI",
+            "producto": "Filtro deshidratador universal",
+            "categoria": "Filtros deshidratadores",
+            "unidades_vendidas": 2,
+            "promedio_categoria": 3.5
+        },
+        {
+            "id_producto": 8,
+            "codigo": "GAS-R134A-13K",
+            "producto": "Gas refrigerante R134a cilindro 13.6 kg",
+            "categoria": "Gases refrigerantes",
+            "unidades_vendidas": 3,
+            "promedio_categoria": 14.0
+        }
+    ]
+}

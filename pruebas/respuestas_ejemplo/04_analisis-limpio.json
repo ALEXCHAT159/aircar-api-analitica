@@ -1,0 +1,38 @@
+{
+    "estado": "ok",
+    "codigo": 200,
+    "endpoint": "/api/segmentos/analisis-limpio",
+    "descripcion": "Lo facturado por tipo de vehículo sin contar clientes con créditos vencidos.",
+    "parametros": {},
+    "total_registros": 4,
+    "datos": [
+        {
+            "segmento": "BUS",
+            "clientes": 1,
+            "facturas": 1,
+            "total_facturado": 3260000.0,
+            "promedio_por_factura": 3260000.0
+        },
+        {
+            "segmento": "AUTOMOVIL",
+            "clientes": 4,
+            "facturas": 5,
+            "total_facturado": 2816000.0,
+            "promedio_por_factura": 563200.0
+        },
+        {
+            "segmento": "MAQUINARIA",
+            "clientes": 2,
+            "facturas": 2,
+            "total_facturado": 1378000.0,
+            "promedio_por_factura": 689000.0
+        },
+        {
+            "segmento": "CAMION",
+            "clientes": 1,
+            "facturas": 1,
+            "total_facturado": 1084000.0,
+            "promedio_por_factura": 1084000.0
+        }
+    ]
+}

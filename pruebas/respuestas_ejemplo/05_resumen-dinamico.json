@@ -1,0 +1,33 @@
+{
+    "estado": "ok",
+    "codigo": 200,
+    "endpoint": "/api/operaciones/resumen-dinamico",
+    "descripcion": "Medios de pago con al menos N abonos y promedio mayor que el repuesto más barato.",
+    "parametros": {
+        "min_operaciones": 2
+    },
+    "total_registros": 3,
+    "datos": [
+        {
+            "metodo_pago": "TRANSFERENCIA",
+            "operaciones": 12,
+            "total_recaudado": 7160000.0,
+            "promedio_por_operacion": 596666.67,
+            "precio_minimo_catalogo": 30000.0
+        },
+        {
+            "metodo_pago": "EFECTIVO",
+            "operaciones": 8,
+            "total_recaudado": 2987000.0,
+            "promedio_por_operacion": 373375.0,
+            "precio_minimo_catalogo": 30000.0
+        },
+        {
+            "metodo_pago": "TARJETA",
+            "operaciones": 2,
+            "total_recaudado": 668000.0,
+            "promedio_por_operacion": 334000.0,
+            "precio_minimo_catalogo": 30000.0
+        }
+    ]
+}

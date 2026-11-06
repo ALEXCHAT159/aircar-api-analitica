@@ -1,0 +1,46 @@
+{
+    "estado": "ok",
+    "codigo": 200,
+    "endpoint": "/api/reportes/clasificacion-top",
+    "descripcion": "Categorías de repuestos que venden más por línea que el promedio de todas las líneas.",
+    "parametros": {},
+    "total_registros": 4,
+    "datos": [
+        {
+            "id_categoria": 15,
+            "categoria": "Kits de instalación",
+            "lineas_vendidas": 1,
+            "unidades_vendidas": 1,
+            "total_vendido": 2300000.0,
+            "promedio_por_linea": 2300000.0,
+            "promedio_global": 297274.51
+        },
+        {
+            "id_categoria": 1,
+            "categoria": "Compresores",
+            "lineas_vendidas": 4,
+            "unidades_vendidas": 4,
+            "total_vendido": 5880000.0,
+            "promedio_por_linea": 1470000.0,
+            "promedio_global": 297274.51
+        },
+        {
+            "id_categoria": 2,
+            "categoria": "Condensadores",
+            "lineas_vendidas": 3,
+            "unidades_vendidas": 3,
+            "total_vendido": 1440000.0,
+            "promedio_por_linea": 480000.0,
+            "promedio_global": 297274.51
+        },
+        {
+            "id_categoria": 3,
+            "categoria": "Evaporadores",
+            "lineas_vendidas": 1,
+            "unidades_vendidas": 1,
+            "total_vendido": 390000.0,
+            "promedio_por_linea": 390000.0,
+            "promedio_global": 297274.51
+        }
+    ]
+}

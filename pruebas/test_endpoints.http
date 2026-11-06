@@ -1,0 +1,41 @@
+# Pruebas de la API de analítica AirCar Manager
+# Uso: extensión "REST Client" de VS Code (clic en "Send Request")
+# Antes: uvicorn app.main:app --reload
+
+@base = http://127.0.0.1:8000
+
+### 1. Categorías con promedio por línea superior al promedio global
+GET {{base}}/api/reportes/clasificacion-top
+Accept: application/json
+
+### 2. Clientes estrella (total facturado > promedio por cliente)
+GET {{base}}/api/analitica/actores-estrella
+Accept: application/json
+
+### 3. Repuestos por debajo del promedio de su categoría
+GET {{base}}/api/items/desviacion-grupo?comparacion=inferior
+Accept: application/json
+
+### 3b. (Variante) Repuestos por encima del promedio de su categoría
+GET {{base}}/api/items/desviacion-grupo?comparacion=superior
+Accept: application/json
+
+### 4. Facturación por tipo de vehículo sin clientes con crédito VENCIDO
+GET {{base}}/api/segmentos/analisis-limpio
+Accept: application/json
+
+### 5. Resumen por método de pago (por defecto min_operaciones = 2)
+GET {{base}}/api/operaciones/resumen-dinamico
+Accept: application/json
+
+### 5b. Mismo resumen con al menos 5 operaciones (TARJETA queda por fuera)
+GET {{base}}/api/operaciones/resumen-dinamico?min_operaciones=5
+Accept: application/json
+
+### 5c. Sin grupos que cumplan -> 404
+GET {{base}}/api/operaciones/resumen-dinamico?min_operaciones=50
+Accept: application/json
+
+### 5d. Parámetro inválido -> 400
+GET {{base}}/api/operaciones/resumen-dinamico?min_operaciones=abc
+Accept: application/json

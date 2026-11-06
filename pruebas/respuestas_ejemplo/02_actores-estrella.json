@@ -1,0 +1,50 @@
+{
+    "estado": "ok",
+    "codigo": 200,
+    "endpoint": "/api/analitica/actores-estrella",
+    "descripcion": "Clientes que han facturado más que el cliente promedio.",
+    "parametros": {},
+    "total_registros": 5,
+    "datos": [
+        {
+            "id_cliente": 6,
+            "documento": "78111006",
+            "cliente": "Fabio Nelson Contreras Ibáñez",
+            "facturas": 3,
+            "total_acumulado": 5729000.0,
+            "promedio_por_cliente": 1370066.67
+        },
+        {
+            "id_cliente": 15,
+            "documento": "78111015",
+            "cliente": "Samuel David Soto Burgos",
+            "facturas": 2,
+            "total_acumulado": 3866000.0,
+            "promedio_por_cliente": 1370066.67
+        },
+        {
+            "id_cliente": 3,
+            "documento": "78111003",
+            "cliente": "Pedro Pablo Ramos Vitola",
+            "facturas": 2,
+            "total_acumulado": 2744000.0,
+            "promedio_por_cliente": 1370066.67
+        },
+        {
+            "id_cliente": 2,
+            "documento": "1067111002",
+            "cliente": "Marta Elena Bula Gómez",
+            "facturas": 2,
+            "total_acumulado": 2085000.0,
+            "promedio_por_cliente": 1370066.67
+        },
+        {
+            "id_cliente": 12,
+            "documento": "78111012",
+            "cliente": "Hugo Armando Lacharme Peña",
+            "facturas": 1,
+            "total_acumulado": 1380000.0,
+            "promedio_por_cliente": 1370066.67
+        }
+    ]
+}
